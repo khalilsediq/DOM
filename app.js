@@ -127,7 +127,7 @@ const box = document.querySelector("#boxing");
 
 box.style.backgroundColor = "green";
 box.style.width = "200px";
-
+box.style.color = "wheat"
 
 // 10. Get the email entered in an input with id "email" and print it in the console.
 
@@ -136,5 +136,5 @@ const print = document.querySelector("#print")
 
 print.addEventListener('click', () =>{
   console.log(email.value);
-
+  email.value = ""
 })
