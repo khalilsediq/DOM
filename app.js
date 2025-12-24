@@ -93,6 +93,7 @@ const btnClicked = document.querySelector(".submit-btn");
 btnClicked.addEventListener("click", () => {
   console.log("Button Clicked");
 });
+//////////////Completed
 
 // 7. Get values from two inputs with ids "first" and "second", add them (as numbers),
 // and show the result in a span with id "sum".
@@ -105,6 +106,7 @@ const sumNum = document.querySelector("#sum-btn");
 sumNum.addEventListener("click", () => {
   sumResult.innerHTML = Number(first.value) + Number(second.value);
 });
+//////////////Completed
 
 // const body = document.querySelector("body");
 
@@ -114,6 +116,7 @@ sumNum.addEventListener("click", () => {
 // }
 
 // ColorChange(prompt("Enter Your color to change it"));
+//////////////Completed
 
 // 8. Change the text of a paragraph with class "description" to "Updated
 // successfully".
@@ -121,20 +124,71 @@ sumNum.addEventListener("click", () => {
 const para = document.querySelector(".description");
 
 para.innerHTML = "updated successfully";
+//////////////Completed
 
 // 9. Select a div with id "box" and set its width to 200px and background color to green.
 const box = document.querySelector("#boxing");
 
 box.style.backgroundColor = "green";
 box.style.width = "200px";
-box.style.color = "wheat"
+box.style.color = "wheat";
+//////////////Completed
 
 // 10. Get the email entered in an input with id "email" and print it in the console.
 
-const email = document.querySelector("#email")
-const print = document.querySelector("#print")
+const email = document.querySelector("#email");
+const print = document.querySelector("#print");
 
-print.addEventListener('click', () =>{
+print.addEventListener("click", () => {
   console.log(email.value);
-  email.value = ""
-})
+  email.value = "";
+});
+//////////////Completed
+
+// 11. Select a paragraph and update its font size to 24px.
+
+const para3 = document.querySelector("p");
+para3.style.fontSize = "24px";
+//////////////Completed
+
+// 12. On button click, get a name from input "fullName" and set the text "Hello,
+// [name]" inside a div "greeting".
+const fullName = document.querySelector("#fullName");
+const greeting = document.querySelector("#greeting");
+const greetRestult = document.querySelector("#greetRestult");
+
+greetRestult.addEventListener("click", () => {
+  greeting.innerHTML = `Hello ${fullName.value}`;
+  fullName.value = "";
+});
+
+// function greetResult() {
+//   greeting.innerHTML = `Hello ${fullName.value}`;
+
+//   fullName.value = ""
+// }
+//////////////Completed
+
+// 13. Select an image with id "profilePic" and change its src to another image URL
+const img = document.querySelector("#profilePic");
+const changeImg = document.querySelector("#changeImg");
+changeImg.addEventListener("click", () => {
+  img.src =
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqFafMUDS6sdS5uTCxtarRM78d1PExPz5F-Q91pzWAc1Gld9NA2xMfDWo&s";
+});
+//////////////Completed
+
+// 14. Change the text color of all elements with class "highlight" to orange. (Hint: You’ll need querySelectorAll for multiple)
+
+const high1 = document.querySelectorAll(".highlight");
+console.log(high1);
+
+for (let i = 0; i < high1.length; i++) {
+  high1[i].style.backgroundColor = "lightblue";
+  high1[i].style.color = "orange";
+  high1[i].style.width = "40%";
+  high1[i].style.borderRadius = "30px";
+  high1[i].style.display = "flex";
+  high1[i].style.justifyContent = "center";
+  high1[i].style.margin = "0 auto";
+}
