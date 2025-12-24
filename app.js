@@ -179,7 +179,6 @@ changeImg.addEventListener("click", () => {
 //////////////Completed
 
 // 14. Change the text color of all elements with class "highlight" to orange. (Hint: You’ll need querySelectorAll for multiple)
-
 const high1 = document.querySelectorAll(".highlight");
 console.log(high1);
 
@@ -192,3 +191,81 @@ for (let i = 0; i < high1.length; i++) {
   high1[i].style.justifyContent = "center";
   high1[i].style.margin = "0 auto";
 }
+//////////////Completed
+
+// 15. Select a checkbox with id "agree" and check whether it is checked or not, then display
+// "Agreed" or "Not Agreed" in a paragraph.
+const agree = document.querySelector("#agree");
+const para1 = document.querySelector("#para1");
+agree.addEventListener("change", () => {
+  if (agree.checked !== true) {
+    para1.innerHTML = " Not Agreed";
+  } else {
+    para1.innerHTML = "Agreed";
+  }
+});
+//////////////Completed
+
+//16 Get the selected value from a dropdown (select element) with id "options" and display
+// it in "selectedValue" span.
+
+const options = document.querySelector("#options");
+const valueResult = document.querySelector("#selectedValue");
+
+valueResult.innerHTML = options.value;
+
+// options.addEventListener("change", () =>{
+//   valueResult.innerHTML = options.value;
+// })
+//////////////Completed
+
+//   17. When a button is clicked, show the current date and time inside a paragraph with id
+// "dateTime".
+
+const dateBtn = document.querySelector("#btn-date");
+const dateTime = document.querySelector("#dateTime");
+
+dateBtn.addEventListener("click", () => {
+  let now = new Date();
+  const date = `${now.getDate()}/${
+    now.getMonth() + 1
+  }/${now.getFullYear()} ${now.getHours()}: ${now.getMinutes()}: ${now.getSeconds()}`;
+  console.log(date);
+
+  dateTime.innerHTML = date;
+});
+
+// console.log(dateBtn);
+//////////////Completed
+
+// 18. Select a paragraph with id "togglePara" and hide it (set display: none).
+
+const hide = document.querySelector("#togglePara");
+hide.style.display = "none";
+//////////////Completed
+
+// 19. Get a user’s age from an input with id "age" and display "Eligible" if age >= 18,
+// else "Not Eligible" in a span.
+
+const age = document.querySelector("#age");
+const display = document.querySelector("#display");
+
+age.addEventListener("change", () => {
+  if (Number(age.value) >= 18) {
+    display.innerHTML = "Eligible";
+  } else {
+    display.innerHTML = "Not Eligible";
+  }
+});
+//////////////Completed
+
+// 20. When a button is clicked, clear the value of an input with id "searchBox".
+const searchBox = document.querySelector("#searchBox");
+const clearBtn = document.querySelector("#clearBtn");
+
+clearBtn.addEventListener("click", () => {
+  searchBox.value = "";
+});
+
+//////////////Completed
+
