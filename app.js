@@ -268,4 +268,3 @@ clearBtn.addEventListener("click", () => {
 });
 
 //////////////Completed
-
